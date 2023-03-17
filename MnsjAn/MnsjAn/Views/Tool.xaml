@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"  
+       xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"  
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             x:Class="MnsjAn.Views.Tool">
+
+    <!--Animacion de popup-->
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation   
+               PositionIn="Bottom"  
+               PositionOut="Bottom"  
+                
+               DurationIn="400"  
+               DurationOut="300"  
+               EasingIn="SinOut"  
+               EasingOut="SinIn"  
+               HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <StackLayout VerticalOptions="EndAndExpand"   
+           HorizontalOptions="FillAndExpand" >
+        <!--Lista opciones botones-->
+        <Frame CornerRadius="20"  HorizontalOptions="FillAndExpand" HeightRequest="300" >
+            <StackLayout>
+
+                <buttons:SfButton x:Name="link" Text="How to share the link" ShowIcon="True" BackgroundColor="Transparent" 
+                              TextColor="Black" FontAttributes="Bold"
+                              FontSize="20" HorizontalOptions="CenterAndExpand" Clicked="link_Clicked">
+                <buttons:SfButton.Image>
+                    <Image Source="https://emojigraph.org/media/joypixels/love-letter_1f48c.png"
+                           HeightRequest="20" WidthRequest="20"/>
+                </buttons:SfButton.Image>
+            </buttons:SfButton>
+
+                <BoxView Color="#DDDCE1" HeightRequest="0.5"  HorizontalOptions="FillAndExpand"></BoxView>
+
+            <buttons:SfButton x:Name="ins"  Text="Follow our Instagram" TextColor="Black" ShowIcon="True"
+                    BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand"
+                    Clicked="ins_Clicked" FontSize="20" FontAttributes="Bold">
+                <buttons:SfButton.Image>
+                    <Image Source="https://i.pinimg.com/originals/3b/21/c7/3b21c7efd2ba9c119fb8d361acacc31d.png"
+                           HeightRequest="20" WidthRequest="20"/>
+                </buttons:SfButton.Image>
+            </buttons:SfButton>
+
+                <BoxView Color="#DDDCE1" HeightRequest="0.5"  HorizontalOptions="FillAndExpand"></BoxView>
+
+                <buttons:SfButton x:Name="help"  Text="I need help" TextColor="Black" HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="Transparent" Clicked="help_Clicked" FontSize="20" ShowIcon="True" FontAttributes="Bold">
+                <buttons:SfButton.Image>
+                    <Image Source="https://emojitool.com/img/apple/ios-13.3/loudly-crying-face-190.png"
+                           HeightRequest="20" WidthRequest="20"/>
+                </buttons:SfButton.Image>
+            </buttons:SfButton>
+
+                <BoxView Color="#DDDCE1" HeightRequest="0.5"  HorizontalOptions="FillAndExpand"></BoxView>
+
+                <buttons:SfButton x:Name="sett"  Text="Settings" TextColor="Black" HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="Transparent" Clicked="sett_Clicked" FontSize="20" ShowIcon="True" FontAttributes="Bold">
+                <buttons:SfButton.Image>
+                    <Image Source="https://emoji-copy.com/wp-content/uploads/2699.png"
+                           HeightRequest="20" WidthRequest="20"/>
+                </buttons:SfButton.Image>
+            </buttons:SfButton>
+
+                <BoxView Color="#DDDCE1" HeightRequest="0.5" ></BoxView>
+                
+                <!--Boton close-->
+                <Button 
+                x:Name="btnClose"
+                Text="Close"
+                BackgroundColor="black"
+                TextColor="white"
+                FontAttributes="Bold"
+                FontSize="20"
+                Margin="30,10"
+                CornerRadius="25"
+                VerticalOptions="End"
+                Clicked="btnClose_Clicked"
+                />
+            </StackLayout>
+        </Frame>
+      </StackLayout>
+
+</pages:PopupPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="MnsjAn.Views.Cuenta" >
+
+    <StackLayout  HorizontalOptions="Center" VerticalOptions="Center"  >
+
+        <Frame CornerRadius="20"  HorizontalOptions="FillAndExpand" HeightRequest="150"  BackgroundColor="White" Margin="10,0,10,0">
+            <StackLayout>
+                <!--Titulo-->
+
+                <StackLayout>
+                    <Label Text="¿Estas seguro?" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                    VerticalOptions="Center" HorizontalOptions="Center" 
+                       Margin="20,20,20,0" TextColor="Black" FontSize="18"/>
+                </StackLayout>
+
+                <!--Texto-->
+                <Label Text="Si eliminas tu cuenta, perderas el acceso a tu nombre de usuario y a todas las preguntas" VerticalOptions="Center" FontSize="16" 
+                   TextColor="Black" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+
+                <!--Boton accion-->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                    <Button x:Name="cancelar" Text="Cancelar" CornerRadius="15" BackgroundColor="Gray" TextColor="White" FontAttributes="Bold"
+                    HeightRequest="50" WidthRequest="100"  Margin="0,0,10,0" Clicked="cancelar_Clicked"></Button>
+
+                    <Button x:Name="eliminar" Text="Eliminar" CornerRadius="15" BackgroundColor="Red"
+                            TextColor="White" FontAttributes="Bold" FontSize="Small"
+                    HeightRequest="50" WidthRequest="100" Margin="0,0,10,0" Clicked="eliminar_Clicked"></Button>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+</popup:PopupPage>

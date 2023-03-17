@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="MnsjAn.Views.Tutorial.uno" >
+
+    <StackLayout  HorizontalOptions="Center" VerticalOptions="Center"  >
+
+        <Frame CornerRadius="20"  HorizontalOptions="FillAndExpand" HeightRequest="400" BackgroundColor="White" Margin="20,0,20,0">
+            <StackLayout>
+                <!--Titulo-->
+        
+            <StackLayout>
+            <Label Text="Como añadir el enlace a tu historia" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                    VerticalOptions="Center" HorizontalOptions="Center" 
+                       Margin="20,20,20,0" TextColor="Black" FontSize="28"/>
+            </StackLayout>
+
+        <!--Botones 1-4-->
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center"> 
+                
+                <Button x:Name="one" Text="1" CornerRadius="50" BackgroundColor="Black" TextColor="White" FontAttributes="Bold"
+                    HeightRequest="35" WidthRequest="35" Clicked="uno_Clicked" Margin="0,0,10,0"></Button>
+
+            <Button x:Name="two" Text="2" CornerRadius="50" BackgroundColor="#E2E1E9" TextColor="Black" FontAttributes="Bold"
+                    HeightRequest="35" WidthRequest="35" Clicked="dos_Clicked" Margin="0,0,10,0"></Button>
+
+            <Button x:Name="three" Text="3" CornerRadius="50" BackgroundColor="#E2E1E9" TextColor="Black" FontAttributes="Bold"
+                    HeightRequest="35" WidthRequest="35" Clicked="tres_Clicked" Margin="0,0,10,0"></Button>
+
+            <Button x:Name="four" Text="4" CornerRadius="50" BackgroundColor="#E2E1E9" TextColor="Black" FontAttributes="Bold"
+                    HeightRequest="35" WidthRequest="35" Clicked="cuatro_Clicked" Margin="0,0,10,0"></Button>
+
+            </StackLayout>
+        
+        <!--Texto-->
+        <Label Text="Haz clic en el boton" VerticalOptions="Center" FontSize="25" 
+                   TextColor="Black" HorizontalOptions="Center" />
+
+        <!--Imagen-->
+        <StackLayout Padding="0">
+            <Frame CornerRadius="20" Padding="0" WidthRequest="220" HeightRequest="450" VerticalOptions="FillAndExpand"
+           HorizontalOptions="CenterAndExpand" HasShadow="False" IsClippedToBounds="True"
+                  >
+                <Image Source="https://i.blogs.es/54697c/nuevo-sticker/450_1000.jpg" Aspect="AspectFill"
+          
+          />
+                </Frame>
+            </StackLayout>
+
+        <!--Btn Siguiente-->
+        <Button 
+                x:Name="btnSiguiente"
+                FontSize="Subtitle"
+                Text="Siguiente paso"
+                BackgroundColor="black"
+                TextColor="white"
+                FontAttributes="Bold"
+               Margin="30,10,30,20"
+                CornerRadius="25"
+                VerticalOptions="End"
+                Clicked="btnSiguiente_Clicked"
+                />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+   
+</popup:PopupPage>

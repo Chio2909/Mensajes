@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MnsjAn.Views.Menu"
+             NavigationPage.HasNavigationBar="False">
+ 
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <!--toolbar-->
+            <StackLayout>
+                <Grid BackgroundColor="white" VerticalOptions="StartAndExpand" HeightRequest="40" Padding="10"
+              RowSpacing="0" ColumnSpacing="0" ColumnDefinitions="*,*,*">
+                    <Button Grid.Column="1" Clicked="Button_Clicked"
+                WidthRequest="70" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold"
+                FontSize="16" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="38" Text="PLAY"
+                ></Button>
+                    <Button Grid.Column="2" x:Name="inbox" Clicked="inbox_Clicked"
+                WidthRequest="72" BackgroundColor="Transparent" TextColor="Gray" FontAttributes="Bold"
+                FontSize="16" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="38" Text="INBOX" 
+                ></Button>
+                    <ImageButton  Grid.Column="3"  x:Name="tool" Clicked="tool_Clicked"
+                WidthRequest="20" BackgroundColor="Transparent" Margin="10"
+                 HorizontalOptions="End" VerticalOptions="Center" HeightRequest="20" 
+                Source="https://images.emojiterra.com/twitter/v13.1/512px/2699.png" Opacity="10"
+                ></ImageButton>
+                </Grid>
+                <BoxView Color="#DDDCE1" HeightRequest="0.5"  HorizontalOptions="FillAndExpand"></BoxView>
+
+            </StackLayout>
+
+            <!--CARRUSEL MENSAJES-->
+            <StackLayout>
+                <StackLayout Margin="20,50,20,0">
+                    
+                <CarouselView x:Name="MyCarousel" IndicatorView="MyIndicatorView" PeekAreaInsets="50"
+                          HeightRequest="200" ItemsSource="{Binding tipoList}">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout >
+                                    <Frame BorderColor="LightGray" BackgroundColor="{Binding enlace}"
+                   HeightRequest="200" WidthRequest="300"
+                    CornerRadius="20" HorizontalOptions="Center"  Margin="10">
+
+
+                                    <Grid RowDefinitions="*,Auto,Auto" ColumnDefinitions="*,Auto" >
+
+                                            <Frame BackgroundColor="{Binding enlace}" Grid.ColumnSpan="2" Grid.Row="0" IsClippedToBounds="True" CornerRadius="25" HasShadow="False" Padding="0" >
+                                            <Image Source="https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png"  />
+                                        </Frame >
+                                        <Label Grid.Column="1" Grid.Row="1" Text="{Binding siglas}" FontAttributes="Bold" Padding="0,10,0,0"
+                                               TextColor="White" HorizontalTextAlignment="Center" FontFamily="Lobster-Regular"/>
+
+                                          
+                                                <Label Text="{Binding mensaje}" FontAttributes="Bold" Padding="0,10,0,0"
+                                               TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="EndAndExpand" Grid.Column="1" Grid.Row="2"/>
+                                           
+                                        </Grid>
+
+                                </Frame>
+                            </StackLayout>
+
+                        </DataTemplate>
+                        
+                    </CarouselView.ItemTemplate>
+                    
+                </CarouselView>
+               
+                <IndicatorView x:Name="MyIndicatorView"
+                IndicatorColor="Gray"
+                SelectedIndicatorColor="#3D6CFD"
+                
+                IndicatorSize="7"
+                           VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <!--ENLACE-->
+            <StackLayout  Margin="20,10,20,0">
+                <Frame BackgroundColor="#eee"
+                   HeightRequest="100" WidthRequest="500"
+                    CornerRadius="15" HorizontalOptions="Center">
+                    <Grid>
+                        <StackLayout  >
+                            <Label
+                Text="Paso 1: Copia tu enlace"
+                TextColor="Black"
+               FontAttributes="Bold"
+                HorizontalOptions="Center"
+                                FontSize="18"
+                >
+                            </Label>
+
+                            <Label
+                x:Name="enlace"
+                TextColor="Gray"
+                Text="https://nglapi.000webhostapp.com/" 
+                HorizontalOptions="Center" Margin="20,10,20,0"
+                >
+                            </Label>
+                            <Button
+                                HeightRequest="40"
+                               Margin="30,0,30,0"
+                x:Name="btnEnlace"
+                Text="Copiar enlace"
+                 FontAttributes="Bold"
+                CornerRadius="25"
+                FontSize="15"
+                TextColor="Black"
+                BorderColor="black"
+                BorderWidth="1"
+                BackgroundColor="Transparent"
+                Clicked="btnEnlace_Clicked"
+                >
+
+                            </Button>
+                        </StackLayout>
+                    </Grid>
+                    
+                </Frame>
+    
+        </StackLayout>
+
+            <!--COMPARTIR-->
+            <StackLayout  Margin="20,10,20,0">
+                <Frame BackgroundColor="#eee"
+                   HeightRequest="120" WidthRequest="500"
+                    CornerRadius="15" HorizontalOptions="Center">
+                    <Grid>
+                        <StackLayout>
+                            <Label
+                Text="Paso 2: Comparte el enlace en tu historia de Instagram"
+                                HorizontalTextAlignment="Center"
+                TextColor="Black"
+               FontAttributes="Bold"
+                                FontSize="18"
+                HorizontalOptions="Center"
+                >
+
+                            </Label>
+
+                            <Button
+                    x:Name="btnComparte"
+                Text="¡Comparte!"
+                    FontSize="Title"
+                 FontAttributes="Bold"
+                CornerRadius="25"
+                TextColor="White"
+                Margin="10,15"
+                BackgroundColor="Black"
+                Clicked="btnComparte_Clicked"
+                >
+
+                            </Button>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+
+           
+
+           
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

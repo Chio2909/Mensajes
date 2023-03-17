@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"  
+       xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"  
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             x:Class="MnsjAn.Views.Settings">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation   
+               PositionIn="Bottom"  
+               PositionOut="Bottom"  
+                
+               DurationIn="400"  
+               DurationOut="300"  
+               EasingIn="SinOut"  
+               EasingOut="SinIn"  
+               HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <StackLayout VerticalOptions="EndAndExpand"   
+           HorizontalOptions="FillAndExpand" >
+
+        <Frame CornerRadius="20"  HorizontalOptions="FillAndExpand" HeightRequest="200" >
+            <StackLayout>
+                <Button x:Name="ngl" Text="NGL love messages: on"  BackgroundColor="Transparent" 
+                              TextColor="Black" FontAttributes="Bold"
+                              FontSize="20" HorizontalOptions="CenterAndExpand" Clicked="ngl_Clicked">
+                </Button>
+
+                <BoxView Color="#DDDCE1" HeightRequest="0.5"  HorizontalOptions="FillAndExpand"></BoxView>
+
+                <Button x:Name="account" Text="Delete Account"  BackgroundColor="Transparent" 
+                              TextColor="Red" FontAttributes="Bold"
+                              FontSize="20" HorizontalOptions="CenterAndExpand" Clicked="account_Clicked">
+                </Button>
+
+                <BoxView Color="#DDDCE1" HeightRequest="0.5"  HorizontalOptions="FillAndExpand"></BoxView>
+
+                <Button 
+                x:Name="btnClose"
+                Text="Close"
+                BackgroundColor="black"
+                TextColor="white"
+                FontAttributes="Bold"
+                FontSize="20"
+                Margin="30,10"
+                CornerRadius="25"
+                VerticalOptions="End"
+               Clicked="btnClose_Clicked"
+                />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>

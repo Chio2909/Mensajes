@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"  
+       xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"  
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             x:Class="MnsjAn.Views.DetailWarning">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation   
+               PositionIn="Bottom"  
+               PositionOut="Bottom"  
+               DurationIn="400"  
+               DurationOut="300"  
+               EasingIn="SinOut"  
+               EasingOut="SinIn"  
+               HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <StackLayout VerticalOptions="EndAndExpand"   
+           HorizontalOptions="FillAndExpand" >
+
+        <Frame CornerRadius="20"  HorizontalOptions="FillAndExpand" HeightRequest="250" >
+            <StackLayout>
+
+                <Button 
+                x:Name="delete"
+                Text="Eliminar mensaje"
+                BackgroundColor="black"
+                TextColor="white"
+                FontAttributes="Bold"
+                FontSize="20"
+                Margin="30,10,30,5"
+                CornerRadius="25"
+                VerticalOptions="End"
+             
+                />
+
+
+                <Button 
+                x:Name="block"
+                Text="Bloquear usuario"
+                BackgroundColor="black"
+                TextColor="white"
+                FontAttributes="Bold"
+                FontSize="20"
+                Margin="30,5"
+                CornerRadius="25"
+                VerticalOptions="End"
+              
+                />
+
+
+                <Button 
+                x:Name="btnNo"
+                Text="Notificar al equipo "
+                BackgroundColor="Red"
+                TextColor="white"
+                FontAttributes="Bold"
+                FontSize="20"
+                Margin="30,5"
+                CornerRadius="25"
+                VerticalOptions="End"
+              
+                />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>
