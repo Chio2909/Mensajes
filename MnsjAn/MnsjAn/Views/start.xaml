@@ -9,9 +9,9 @@
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0,1">
                   
-                    <GradientStop Color=" #EC1187"
+                    <GradientStop Color=" #401430"
                           Offset="0.1" />
-                    <GradientStop Color="#FF8D10"
+                    <GradientStop Color="#A60F55"
                           Offset="1.0" />
                 </LinearGradientBrush>
             </Grid.Background>
@@ -19,12 +19,12 @@
             <StackLayout VerticalOptions="CenterAndExpand" Spacing="20" >
                 <!--Logo-->
                 <Image
-                Source="https://assets.website-files.com/62a6e19b906fa55f541799d7/62a6e2da4349165183f83d89_ngl_icon.png"
-               HeightRequest="120" Margin="0,30" 
+                Source="logo.png"
+               HeightRequest="160" Margin="0,30" 
                 />
                 <!--Titulo-->
                 <Label 
-                Text="¡Recibe mensajes anonimos en Instagram!"
+                Text="¡Recibe preguntas secretas!"
                 HorizontalTextAlignment="Center"
                 TextColor="White"
                 FontSize="25"

@@ -9,9 +9,9 @@
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0,1">
 
-                    <GradientStop Color=" #EC1187"
+                    <GradientStop Color=" #401430"
                           Offset="0.1" />
-                    <GradientStop Color="#FF8D10"
+                    <GradientStop Color="#A60F55"
                           Offset="1.0" />
                 </LinearGradientBrush>
             </Grid.Background>
@@ -19,13 +19,13 @@
                 <!--Logo-->
                 <Image
               
-                Source="https://assets.website-files.com/62a6e19b906fa55f541799d7/62a6e2da4349165183f83d89_ngl_icon.png"
-               HeightRequest="50"
+                Source="logo.png"
+               HeightRequest="80"
                 Margin="0,20"
                 />
                 <!--Titulo-->
                 <Label 
-                Text="¿Cual es tu nombre de usuario de Instagram?"
+                Text="Nombre de usuario"
     HorizontalTextAlignment="Center"
                 TextColor="White"
                 HorizontalOptions="CenterAndExpand"
@@ -33,35 +33,29 @@
                 FontAttributes="Bold"
     Margin="20,0,20,10"
                 />
-                <!--Ejemplo usuario-->
-                <Label 
-                Text="Ex: @champagnepapi"
-                TextColor="White"
-                HorizontalOptions="Center"
-                FontSize="18"
                
-                />
                 <!--Nombre usuario-->
-                <Frame
+                <!--<Frame
                     Margin="50,5"
                    CornerRadius     ="25"
                    IsClippedToBounds="true"
-                    BackgroundColor="#f7e1cb"
+                    BackgroundColor="#F2D399"
                     HeightRequest="40"
-                    >
+                    BorderColor="Transparent" 
+                    >-->
                     <Entry 
-   Text="@"
                         x:Name="txtUser"
                FontAttributes="Bold"
-                TextColor="#b75f30"
-               CornerRadius="20"
+                TextColor="#F2D399"
                         HeightRequest="40"
-       Padding="0"
+                        BackgroundColor="Transparent"
     FontSize="20"
+                        
+                        Margin="20,0,20,0"
                 HorizontalTextAlignment="Center" 
               
                 />
-                </Frame>
+                <!--</Frame>-->
                 <!--Boton listo-->
                 <!--<Button 
                x:Name="btnListo"
@@ -87,11 +81,12 @@
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand" 
                    Clicked="btnListo_Clicked"
-                  WidthRequest="300"
+                  WidthRequest="250"
                   BackgroundColor="Transparent"
+                              Margin="0,30,0,0"
                             >
                     <ImageButton.Triggers>
-                        <DataTrigger TargetType="ImageButton" Binding="{Binding Source={x:Reference txtUser}, Path=Text.Length}" Value="1">
+                        <DataTrigger TargetType="ImageButton" Binding="{Binding Source={x:Reference txtUser}, Path=Text.Length}" Value="0">
                             <Setter Property="IsVisible" Value="False"></Setter>
                         </DataTrigger>
                     </ImageButton.Triggers>

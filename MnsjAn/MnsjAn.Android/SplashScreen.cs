@@ -12,7 +12,7 @@ using System.Text;
 
 namespace MnsjAn.Droid
 {
-    [Activity(Label = "My Secret Question", Icon = "@mipmap/icon",
+    [Activity(Label = "My Secret Question", Icon = "@mipmap/ic_msq",
           Theme = "@style/ThemeNew",
           MainLauncher = true,
           ConfigurationChanges = ConfigChanges.ScreenSize)]
