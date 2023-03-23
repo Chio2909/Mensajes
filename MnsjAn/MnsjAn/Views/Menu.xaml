@@ -98,7 +98,8 @@
                 HorizontalOptions="Center" Margin="20,10,20,0"
                 >
                             </Label>
-                            <Button
+                            
+                            <!--<Button
                                 HeightRequest="40"
                                Margin="30,0,30,0"
                 x:Name="btnEnlace"
@@ -113,8 +114,17 @@
                 Clicked="btnEnlace_Clicked"
                 >
 
-                            </Button>
-                        </StackLayout>
+                            </Button>-->
+                                <ImageButton  x:Name="btnEnlace"
+                    Source="copiar.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand" 
+                   Clicked="btnEnlace_Clicked"
+                  WidthRequest="200"
+                  BackgroundColor="Transparent"
+                            />
+                            
+                            </StackLayout>
                     </Grid>
                     
                 </Frame>
@@ -139,7 +149,7 @@
 
                             </Label>
 
-                            <Button
+                            <!--<Button
                     x:Name="btnComparte"
                 Text="¡Comparte!"
                     FontSize="Title"
@@ -149,9 +159,15 @@
                 Margin="10,15"
                 BackgroundColor="Black"
                 Clicked="btnComparte_Clicked"
-                >
-
-                            </Button>
+                >-->
+                                <ImageButton  x:Name="btnComparte"
+                    Source="compartir.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand" 
+                   Clicked="btnComparte_Clicked"
+                  WidthRequest="200"
+                  BackgroundColor="Transparent"
+                            />
                         </StackLayout>
                     </Grid>
                 </Frame>

@@ -32,7 +32,7 @@
                 Margin="42,0,42,70"
                 />
                 <!--Boton comenzar-->
-                <Button 
+                <!--<Button 
                 x:Name="btnComenzar"
                 Text="¡Comenzar!"
                 BackgroundColor="white"
@@ -42,9 +42,16 @@
                 FontSize="22"
                 CornerRadius="25"
                 Clicked="btnComenzar_Clicked">
+                </Button>-->
 
-        
-            </Button>
+                <ImageButton  x:Name="btnComenzar"
+                    Source="comenzar.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand" 
+                   Clicked="btnComenzar_Clicked"
+                  WidthRequest="300"
+                  BackgroundColor="Transparent"
+                            />
 
                 <!--Condiciones y politicas-->
                 <Label 

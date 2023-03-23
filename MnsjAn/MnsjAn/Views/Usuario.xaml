@@ -54,14 +54,16 @@
                         x:Name="txtUser"
                FontAttributes="Bold"
                 TextColor="#b75f30"
-               
+               CornerRadius="20"
+                        HeightRequest="40"
+       Padding="0"
     FontSize="20"
                 HorizontalTextAlignment="Center" 
               
                 />
                 </Frame>
                 <!--Boton listo-->
-                <Button 
+                <!--<Button 
                x:Name="btnListo"
                 Text="¡Listo!"
                 BackgroundColor="white"
@@ -79,7 +81,21 @@
                         </DataTrigger>
                     </Button.Triggers>
 
-                </Button>
+                </Button>-->
+                <ImageButton  x:Name="btnListo"
+                    Source="login.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand" 
+                   Clicked="btnListo_Clicked"
+                  WidthRequest="300"
+                  BackgroundColor="Transparent"
+                            >
+                    <ImageButton.Triggers>
+                        <DataTrigger TargetType="ImageButton" Binding="{Binding Source={x:Reference txtUser}, Path=Text.Length}" Value="1">
+                            <Setter Property="IsVisible" Value="False"></Setter>
+                        </DataTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
 
 
             </StackLayout>

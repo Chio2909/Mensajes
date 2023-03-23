@@ -6,17 +6,21 @@ using System.Collections.ObjectModel;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using Xamarin.Forms;
 
 namespace MnsjAn.ViewModels
 {
     public class TipoVM
     {
+        
+        
         public ObservableCollection<Tipo> tipoList { get; set; }
 
         public TipoVM()
         {
             GetTipo();
         }
+
         public async void GetTipo()
         {
             tipoList = new ObservableCollection<Tipo>();
@@ -45,5 +49,7 @@ namespace MnsjAn.ViewModels
                 }
             }
         }
+        
+        
     }
 }
