@@ -5,6 +5,7 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using Plugin.CurrentActivity;
+using Acr.UserDialogs;
 
 namespace MnsjAn.Droid
 {

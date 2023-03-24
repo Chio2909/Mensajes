@@ -25,7 +25,7 @@
                 <Button 
                 x:Name="delete"
                 Text="Eliminar mensaje"
-                BackgroundColor="black"
+                BackgroundColor="#401430"
                 TextColor="white"
                 FontAttributes="Bold"
                 FontSize="20"
@@ -39,7 +39,7 @@
                 <Button 
                 x:Name="block"
                 Text="Bloquear usuario"
-                BackgroundColor="black"
+                BackgroundColor="#401430"
                 TextColor="white"
                 FontAttributes="Bold"
                 FontSize="20"
@@ -53,7 +53,7 @@
                 <Button 
                 x:Name="btnNo"
                 Text="Notificar al equipo "
-                BackgroundColor="Red"
+                BackgroundColor="#f21313"
                 TextColor="white"
                 FontAttributes="Bold"
                 FontSize="20"

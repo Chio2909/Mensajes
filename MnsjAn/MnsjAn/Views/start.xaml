@@ -35,12 +35,14 @@
                 <!--<Button 
                 x:Name="btnComenzar"
                 Text="¡Comenzar!"
-                BackgroundColor="white"
-                TextColor="Black"
+                BackgroundColor="black"
+                TextColor="white"
                 FontAttributes="Bold"
                 Margin="20,0"
                 FontSize="22"
                 CornerRadius="25"
+                    ImageSource="play.png"
+                   
                 Clicked="btnComenzar_Clicked">
                 </Button>-->
 

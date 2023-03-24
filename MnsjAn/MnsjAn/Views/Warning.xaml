@@ -29,7 +29,7 @@
                 <Button 
                 x:Name="btnInt"
                 Text="Intimidacion o acoso"
-                BackgroundColor="black"
+                BackgroundColor="#401430"
                 TextColor="white"
                 FontAttributes="Bold"
                 FontSize="20"
@@ -43,7 +43,7 @@
             <Button 
                 x:Name="btnSpam"
                 Text="Spam"
-                BackgroundColor="black"
+                BackgroundColor="#401430"
                 TextColor="white"
                 FontAttributes="Bold"
                 FontSize="20"
@@ -57,7 +57,7 @@
     <Button 
                 x:Name="btnNo"
                 Text="Simplemente no me gusta"
-                BackgroundColor="black"
+                BackgroundColor="#401430"
                 TextColor="white"
                 FontAttributes="Bold"
                 FontSize="20"

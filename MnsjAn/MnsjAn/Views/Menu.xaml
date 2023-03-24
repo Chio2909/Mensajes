@@ -43,14 +43,21 @@
                             <CarouselView.ItemTemplate>
                                 <DataTemplate>
                                     <StackLayout >
-                                        <Frame BorderColor="LightGray" BackgroundColor="{Binding enlace}"
+                                        <Frame BorderColor="LightGray" 
                    HeightRequest="200" WidthRequest="300"
                     CornerRadius="20" HorizontalOptions="Center"  Margin="10">
-
+                                            <Frame.Background>
+                                                <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                                                    <GradientStop Color="Transparent" Offset="0"/>
+                                                    <GradientStop Color="{Binding enlace}" Offset="0.5"/>
+                                                    <GradientStop Color="{Binding enlace}" Offset="0.9"/>
+                                                </LinearGradientBrush>
+                                            </Frame.Background>
 
                                             <Grid RowDefinitions="*,Auto,Auto" ColumnDefinitions="*,Auto" >
 
-                                                <Frame BackgroundColor="{Binding enlace}" Grid.ColumnSpan="2" Grid.Row="0" IsClippedToBounds="True" CornerRadius="25" HasShadow="False" Padding="0" >
+                                                <Frame  Grid.ColumnSpan="2" Grid.Row="0" BackgroundColor="Transparent"
+                                                       IsClippedToBounds="True" CornerRadius="25" HasShadow="False" Padding="0" >
                                                     <Image Source="https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png"  />
                                                 </Frame >
                                                 <Label Grid.Column="1" Grid.Row="1" Text="{Binding siglas}" FontAttributes="Bold" Padding="0,10,0,0"
@@ -191,11 +198,7 @@
                             </Grid>
                         </Frame>
                     </StackLayout>
-
-
-           
-
-        </StackLayout>
+                </StackLayout>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

@@ -71,7 +71,7 @@
                 <Button 
                 x:Name="btnClose"
                 Text="Close"
-                BackgroundColor="black"
+                BackgroundColor="#401430"
                 TextColor="white"
                 FontAttributes="Bold"
                 FontSize="20"

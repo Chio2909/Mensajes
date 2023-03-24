@@ -12,13 +12,15 @@ using Rg.Plugins.Popup.Services;
 using Syncfusion.XForms.Buttons;
 using Rg.Plugins.Popup.Extensions;
 using MnsjAn.ViewModels;
+using Xamarin.CommunityToolkit.UI.Views;
 
 namespace MnsjAn.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Tool : Rg.Plugins.Popup.Pages.PopupPage
     {
-        
+      
+
         public Tool()
         {
             InitializeComponent();
@@ -44,6 +46,7 @@ namespace MnsjAn.Views
 
         private async void sett_Clicked(object sender, EventArgs e)
         {
+           
             await PopupNavigation.Instance.PushAsync(new Settings());
         }
 

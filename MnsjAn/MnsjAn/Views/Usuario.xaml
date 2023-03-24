@@ -5,7 +5,9 @@
              NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Content>
+        
         <Grid>
+            
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0,1">
 
@@ -15,6 +17,9 @@
                           Offset="1.0" />
                 </LinearGradientBrush>
             </Grid.Background>
+
+            
+            
             <StackLayout VerticalOptions="Start" Spacing="10">
                 <!--Logo-->
                 <Image
@@ -35,6 +40,7 @@
                 />
                
                 <!--Nombre usuario-->
+                
                 <!--<Frame
                     Margin="50,5"
                    CornerRadius     ="25"
@@ -90,8 +96,8 @@
                             <Setter Property="IsVisible" Value="False"></Setter>
                         </DataTrigger>
                     </ImageButton.Triggers>
+                   
                 </ImageButton>
-
 
             </StackLayout>
         </Grid>

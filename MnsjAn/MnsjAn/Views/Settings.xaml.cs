@@ -7,22 +7,25 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.CommunityToolkit.UI.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace MnsjAn.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Settings : Rg.Plugins.Popup.Pages.PopupPage
+    public partial class Settings : Rg.Plugins.Popup.Pages.PopupPage 
     {
         private string strAuthentifyUser;
         public static string sstrUser;
+   
+
         LoginAcess OAuthLogin = new LoginAcess(sstrUser);
         public Settings()
         {
             InitializeComponent();
         }
+       
 
         private async void btnClose_Clicked(object sender, EventArgs e)
         {

@@ -1,4 +1,5 @@
-﻿using MnsjAn.Models;
+﻿using Acr.UserDialogs;
+using MnsjAn.Models;
 using MnsjAn.ViewModels;
 using Newtonsoft.Json;
 using System;
@@ -25,6 +26,7 @@ namespace MnsjAn.Views
 
         private async void btnListo_Clicked(object sender, EventArgs e)
         {
+            
             try
             {
                 WebClient client = new WebClient();
@@ -37,13 +39,12 @@ namespace MnsjAn.Views
                 await Navigation.PushAsync(new Menu());
             }
           
-          
                 catch(Exception ex)
                 {
                     await DisplayAlert("Error", ex.Message, "Ok");
                 }
-          
-            
+
+       
         }
     }
 }
