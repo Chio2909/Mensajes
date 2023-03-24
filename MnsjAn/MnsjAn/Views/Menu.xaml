@@ -2,104 +2,116 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="MnsjAn.Views.Menu"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+            >
  
     
     <ContentPage.Content>
-        <StackLayout>
-            <!--toolbar-->
-            <StackLayout>
-                <Grid BackgroundColor="white" VerticalOptions="StartAndExpand" HeightRequest="40" Padding="10"
+       
+            <StackLayout >
+                <!--toolbar-->
+                <StackLayout>
+                    <Grid BackgroundColor="white" VerticalOptions="StartAndExpand" HeightRequest="40" Padding="10"
               RowSpacing="0" ColumnSpacing="0" ColumnDefinitions="*,*,*">
-                    <Button Grid.Column="1" Clicked="Button_Clicked"
+                        <Button Grid.Column="1" Clicked="Button_Clicked"
                 WidthRequest="70" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold"
                 FontSize="16" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="38" Text="PLAY"
                 ></Button>
-                    <Button Grid.Column="2" x:Name="inbox" Clicked="inbox_Clicked"
+                        <Button Grid.Column="2" x:Name="inbox" Clicked="inbox_Clicked"
                 WidthRequest="72" BackgroundColor="Transparent" TextColor="Gray" FontAttributes="Bold"
                 FontSize="16" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="38" Text="INBOX" 
                 ></Button>
-                    <ImageButton  Grid.Column="3"  x:Name="tool" Clicked="tool_Clicked"
+                        <ImageButton  Grid.Column="3"  x:Name="tool" Clicked="tool_Clicked"
                 WidthRequest="20" BackgroundColor="Transparent" Margin="10"
                  HorizontalOptions="End" VerticalOptions="Center" HeightRequest="20" 
                 Source="https://images.emojiterra.com/twitter/v13.1/512px/2699.png" Opacity="10"
                 ></ImageButton>
-                </Grid>
-                <BoxView Color="#DDDCE1" HeightRequest="0.5"  HorizontalOptions="FillAndExpand"></BoxView>
+                    </Grid>
+                    <BoxView Color="#DDDCE1" HeightRequest="0.5"  HorizontalOptions="FillAndExpand"></BoxView>
 
-            </StackLayout>
+                </StackLayout>
+            <Grid>
+                <Image Source="logo.png" Grid.Row="0" />
+                <BoxView BackgroundColor="White" Opacity="0.97" Grid.Row="0"/>
 
-            <!--CARRUSEL MENSAJES-->
-            <StackLayout>
-                <StackLayout Margin="20,50,20,0">
-                    
-                <CarouselView x:Name="MyCarousel" IndicatorView="MyIndicatorView" PeekAreaInsets="50"
+                <!--CARRUSEL MENSAJES-->
+                <StackLayout>
+                    <StackLayout Margin="20,50,20,0">
+
+                        <CarouselView x:Name="MyCarousel" IndicatorView="MyIndicatorView" PeekAreaInsets="50"
                           HeightRequest="200" ItemsSource="{Binding tipoList}">
-                    <CarouselView.ItemTemplate>
-                        <DataTemplate>
-                            <StackLayout >
-                                    <Frame BorderColor="LightGray" BackgroundColor="{Binding enlace}"
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout >
+                                        <Frame BorderColor="LightGray" BackgroundColor="{Binding enlace}"
                    HeightRequest="200" WidthRequest="300"
                     CornerRadius="20" HorizontalOptions="Center"  Margin="10">
 
 
-                                    <Grid RowDefinitions="*,Auto,Auto" ColumnDefinitions="*,Auto" >
+                                            <Grid RowDefinitions="*,Auto,Auto" ColumnDefinitions="*,Auto" >
 
-                                            <Frame BackgroundColor="{Binding enlace}" Grid.ColumnSpan="2" Grid.Row="0" IsClippedToBounds="True" CornerRadius="25" HasShadow="False" Padding="0" >
-                                            <Image Source="https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png"  />
-                                        </Frame >
-                                        <Label Grid.Column="1" Grid.Row="1" Text="{Binding siglas}" FontAttributes="Bold" Padding="0,10,0,0"
+                                                <Frame BackgroundColor="{Binding enlace}" Grid.ColumnSpan="2" Grid.Row="0" IsClippedToBounds="True" CornerRadius="25" HasShadow="False" Padding="0" >
+                                                    <Image Source="https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png"  />
+                                                </Frame >
+                                                <Label Grid.Column="1" Grid.Row="1" Text="{Binding siglas}" FontAttributes="Bold" Padding="0,10,0,0"
                                                TextColor="White" HorizontalTextAlignment="Center" FontFamily="Lobster-Regular"/>
 
-                                          
+
                                                 <Label Text="{Binding mensaje}" FontAttributes="Bold" Padding="0,10,0,0"
                                                TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="EndAndExpand" Grid.Column="1" Grid.Row="2"/>
-                                           
-                                        </Grid>
 
-                                </Frame>
-                            </StackLayout>
+                                            </Grid>
 
-                        </DataTemplate>
-                        
-                    </CarouselView.ItemTemplate>
-                    
-                </CarouselView>
-               
-                <IndicatorView x:Name="MyIndicatorView"
+                                        </Frame>
+                                    </StackLayout>
+
+                                </DataTemplate>
+
+                            </CarouselView.ItemTemplate>
+
+                        </CarouselView>
+
+                        <IndicatorView x:Name="MyIndicatorView"
                 IndicatorColor="Gray"
-                SelectedIndicatorColor="#3D6CFD"
+                SelectedIndicatorColor="#F21313"
                 
                 IndicatorSize="7"
                            VerticalOptions="Center"
                                HorizontalOptions="Center"/>
-            </StackLayout>
+                    </StackLayout>
 
-            <!--ENLACE-->
-            <StackLayout  Margin="20,10,20,0">
-                <Frame BackgroundColor="#eee"
+                    <!--ENLACE-->
+                    <StackLayout  Margin="20,10,20,0">
+                        <Frame
                    HeightRequest="100" WidthRequest="500"
                     CornerRadius="15" HorizontalOptions="Center">
-                    <Grid>
-                        <StackLayout  >
-                            <Label
+                            <Frame.Background>
+                                <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                                    <GradientStop Color="Transparent" Offset="0"/>
+                                    <GradientStop Color="#A60F55" Offset="0.9"/>
+                                    <GradientStop Color="#A60F55" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Frame.Background>
+                            <Grid>
+                                <StackLayout  >
+                                    <Label
                 Text="Paso 1: Copia tu enlace"
-                TextColor="Black"
+                TextColor="#EEE"
                FontAttributes="Bold"
                 HorizontalOptions="Center"
                                 FontSize="18"
                 >
-                            </Label>
+                                    </Label>
 
-                            <Label
+                                    <Label
                 x:Name="enlace"
-                TextColor="Gray"
+                TextColor="#F2D399"
                 Text="https://nglapi.000webhostapp.com/" 
                 HorizontalOptions="Center" Margin="20,10,20,0"
                 >
-                            </Label>
-                            
-                            <!--<Button
+                                    </Label>
+
+                                    <!--<Button
                                 HeightRequest="40"
                                Margin="30,0,30,0"
                 x:Name="btnEnlace"
@@ -115,7 +127,7 @@
                 >
 
                             </Button>-->
-                                <ImageButton  x:Name="btnEnlace"
+                                    <ImageButton  x:Name="btnEnlace"
                     Source="copiar.png"
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand" 
@@ -123,33 +135,40 @@
                   WidthRequest="200"
                   BackgroundColor="Transparent"
                             />
-                            
-                            </StackLayout>
-                    </Grid>
-                    
-                </Frame>
-    
-        </StackLayout>
 
-            <!--COMPARTIR-->
-            <StackLayout  Margin="20,10,20,0">
-                <Frame BackgroundColor="#eee"
+                                </StackLayout>
+                            </Grid>
+
+                        </Frame>
+
+                    </StackLayout>
+
+                    <!--COMPARTIR-->
+                    <StackLayout  Margin="20,10,20,0">
+                        <Frame 
                    HeightRequest="120" WidthRequest="500"
                     CornerRadius="15" HorizontalOptions="Center">
-                    <Grid>
-                        <StackLayout>
-                            <Label
+                            <Frame.Background>
+                                <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                                    <GradientStop Color="Transparent" Offset="0"/>
+                                    <GradientStop Color="#A60F55" Offset="0.9"/>
+                                    <GradientStop Color="#A60F55" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Frame.Background>
+                            <Grid>
+                                <StackLayout>
+                                    <Label
                 Text="Paso 2: Comparte el enlace en tu historia de Instagram"
                                 HorizontalTextAlignment="Center"
-                TextColor="Black"
+                TextColor="#EEE"
                FontAttributes="Bold"
                                 FontSize="18"
                 HorizontalOptions="Center"
                 >
 
-                            </Label>
+                                    </Label>
 
-                            <!--<Button
+                                    <!--<Button
                     x:Name="btnComparte"
                 Text="¡Comparte!"
                     FontSize="Title"
@@ -160,7 +179,7 @@
                 BackgroundColor="Black"
                 Clicked="btnComparte_Clicked"
                 >-->
-                                <ImageButton  x:Name="btnComparte"
+                                    <ImageButton  x:Name="btnComparte"
                     Source="compartir.png"
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand" 
@@ -168,15 +187,16 @@
                   WidthRequest="200"
                   BackgroundColor="Transparent"
                             />
-                        </StackLayout>
-                    </Grid>
-                </Frame>
-            </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+
 
            
 
-           
         </StackLayout>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

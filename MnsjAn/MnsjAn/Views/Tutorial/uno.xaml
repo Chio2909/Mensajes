@@ -2,13 +2,16 @@
 <popup:PopupPage
     xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
-             x:Class="MnsjAn.Views.Tutorial.uno" >
+    xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+    xmlns:stepProgressBar="clr-namespace:Xamarin.Forms.StepProgressBar;assembly=Xamarin.Forms.StepProgressBar"
+    x:Class="MnsjAn.Views.Tutorial.uno" >
 
     <StackLayout  HorizontalOptions="Center" VerticalOptions="Center"  >
 
         <Frame CornerRadius="20"  HorizontalOptions="FillAndExpand" HeightRequest="400" BackgroundColor="White" Margin="20,0,20,0">
             <StackLayout>
+
+               
                 <!--Titulo-->
         
             <StackLayout>
@@ -21,7 +24,7 @@
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center"> 
                 
-                <Button x:Name="one" Text="1" CornerRadius="50" BackgroundColor="Black" TextColor="White" FontAttributes="Bold"
+                <Button x:Name="one" Text="1" CornerRadius="50" BackgroundColor="#F2D399" TextColor="White" FontAttributes="Bold"
                     HeightRequest="35" WidthRequest="35" Clicked="uno_Clicked" Margin="0,0,10,0"></Button>
 
             <Button x:Name="two" Text="2" CornerRadius="50" BackgroundColor="#E2E1E9" TextColor="Black" FontAttributes="Bold"
@@ -55,7 +58,7 @@
                 x:Name="btnSiguiente"
                 FontSize="Subtitle"
                 Text="Siguiente paso"
-                BackgroundColor="black"
+                BackgroundColor="#F2E857"
                 TextColor="white"
                 FontAttributes="Bold"
                Margin="30,10,30,20"

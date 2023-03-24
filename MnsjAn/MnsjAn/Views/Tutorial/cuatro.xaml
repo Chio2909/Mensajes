@@ -23,13 +23,13 @@
             <Button x:Name="one" Text="1" FontSize="Default" CornerRadius="50" BackgroundColor="#E2E1E9" TextColor="Black" FontAttributes="Bold"
                     HeightRequest="35" WidthRequest="35" Clicked="uno_Clicked"></Button>
 
-            <Button x:Name="two" Text="2" CornerRadius="50" BackgroundColor="#E2E1E9" TextColor="Black" FontAttributes="Bold"
+                    <Button x:Name="two" Text="2" CornerRadius="50" BackgroundColor="#E2E1E9" TextColor="Black" FontAttributes="Bold"
                     HeightRequest="35" WidthRequest="35" Clicked="dos_Clicked"></Button>
 
             <Button x:Name="three" Text="3" CornerRadius="50" BackgroundColor="#E2E1E9" TextColor="Black" FontAttributes="Bold"
                     HeightRequest="35" WidthRequest="35" Clicked="tres_Clicked"></Button>
 
-            <Button x:Name="four" Text="4" CornerRadius="50" BackgroundColor="Black" TextColor="White" FontAttributes="Bold"
+                    <Button x:Name="four" Text="4" CornerRadius="50" BackgroundColor="#F2D399" TextColor="White" FontAttributes="Bold"
                     HeightRequest="35" WidthRequest="35" Clicked="cuatro_Clicked"></Button>
 
         </StackLayout>
@@ -50,7 +50,7 @@
         </StackLayout>
 
         <!--Btn compartir-->
-        <Button 
+        <!--<Button 
                 x:Name="btnCompartir"
                 FontSize="Subtitle"
                 Text="¡Compartir en instagram!"
@@ -61,7 +61,15 @@
                 CornerRadius="25"
                 VerticalOptions="End"
                 Clicked="btnCompartir_Clicked"
-                />
+                />-->
+                <ImageButton  x:Name="btnCompartIR"
+                    Source="compartir.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand" 
+                   Clicked="btnCompartir_Clicked"
+                  WidthRequest="200"
+                  BackgroundColor="Transparent"
+                            />
 
     </StackLayout>
     </Frame>
