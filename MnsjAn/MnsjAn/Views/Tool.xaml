@@ -22,15 +22,15 @@
     <StackLayout VerticalOptions="EndAndExpand"   
            HorizontalOptions="FillAndExpand" >
         <!--Lista opciones botones-->
-        <Frame CornerRadius="20"  HorizontalOptions="FillAndExpand" HeightRequest="320" >
+        <Frame CornerRadius="20"  HorizontalOptions="FillAndExpand" HeightRequest="400" >
             <StackLayout>
                 <!--Boton preguntas-->
                 <Button 
                 x:Name="btnQuestion"
-                Text="Preguntas mas frecuentes"
+                 FontAttributes="Bold"
+                Text=" Preguntas mas frecuentes"
                 BackgroundColor="#F21313"
                 TextColor="white"
-                FontAttributes="Bold"
                 FontSize="16"
                 Margin="20,5"
                 CornerRadius="20"
@@ -92,7 +92,23 @@
                 VerticalOptions="End"
                 Clicked="btnClose_Clicked"
                 />
-
+                <Label x:Name="lbUnete" Text="Únete a nosotros" TextColor="Black"
+                       FontAttributes="Bold" FontSize="20" Margin="20,5" HorizontalOptions="Center"/> 
+                
+                <StackLayout Orientation="Horizontal" Margin="20,5" HorizontalOptions="Center">
+                    <ImageButton x:Name="btnFace"
+                        Source="https://static.vecteezy.com/system/resources/previews/016/639/569/non_2x/facebook-icon-element-social-media-free-png.png"
+                                 HeightRequest="35" WidthRequest="35"/>
+                    <ImageButton x:Name="btnIns"
+                        Source="https://static.vecteezy.com/system/resources/previews/017/743/717/non_2x/instagram-icon-logo-free-png.png"
+                                 HeightRequest="35" WidthRequest="35"/>
+                    <ImageButton x:Name="btnYou"
+                        Source="https://static.vecteezy.com/system/resources/previews/016/716/452/non_2x/youtube-icon-free-png.png"
+                                 HeightRequest="35" WidthRequest="35"/>
+                    <ImageButton x:Name="btnTik"
+                        Source="https://assets.stickpng.com/thumbs/5cb78671a7c7755bf004c14b.png"
+                                 HeightRequest="35" WidthRequest="35"/>
+                </StackLayout>
             </StackLayout>
            
         </Frame>

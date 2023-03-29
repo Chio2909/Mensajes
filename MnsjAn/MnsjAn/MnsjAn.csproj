@@ -14,6 +14,7 @@
     <PackageReference Include="Acr.UserDialogs" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="Plugin.DeviceOrientation" Version="1.0.7" />
+    <PackageReference Include="Plugin.LocalNotification" Version="10.1.4" />
     <PackageReference Include="Rg.Plugins.Popup" Version="2.1.0" />
     <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="20.4.0.44" />
     <PackageReference Include="Syncfusion.Xamarin.SfCarousel" Version="20.4.0.43" />
@@ -46,6 +47,9 @@
     <EmbeddedResource Update="Views\Menu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\MiCuenta.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Settings.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -73,5 +77,11 @@
     <EmbeddedResource Update="Views\Warning.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Views\MiCuenta.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 </Project>

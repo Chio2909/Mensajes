@@ -1,6 +1,7 @@
 ﻿using MnsjAn.Models;
 using MnsjAn.ViewModels;
 using Newtonsoft.Json;
+using Plugin.LocalNotification;
 using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace MnsjAn.Views
     
     public partial class Inbox : ContentPage
     {
-
+        
 
         public Inbox()
         {
@@ -27,6 +28,8 @@ namespace MnsjAn.Views
            
 
         }
+       
+
         
 
         private async void btnRecibe_Clicked(object sender, EventArgs e)

@@ -90,7 +90,7 @@
                             <DataTemplate>
                                 <StackLayout Padding="0,0,5,5">
                                         <Frame BackgroundColor="#401430" CornerRadius="20">
-                                            <Label Text="Nueva pregunta" TextColor="White"/>
+                                            <Label Text=" Nueva pregunta" TextColor="White" FontFamily="fontello"/>
                                         </Frame>
                                     <!--<Image  Source="https://emojigraph.org/media/apple/love-letter_1f48c.png" HeightRequest="80" WidthRequest="80"/>-->
                                 </StackLayout>

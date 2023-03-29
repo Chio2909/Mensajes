@@ -40,7 +40,7 @@ namespace MnsjAn.ViewModels
                         id = result.id,
                         descripcion = result.descripcion,
                         tipo_id = result.tipo_id,
-                        usuario_id = result.usuario_id
+                        usuario_id = result.usuario_id,
                     });
                 }
             }

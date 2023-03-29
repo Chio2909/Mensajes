@@ -11,5 +11,6 @@ namespace MnsjAn.Models
 
         public int tipo_id { get; set; }
         public int usuario_id { get; set; }
+        public DateTime fecha_creacion { get; set; }
     }
 }
