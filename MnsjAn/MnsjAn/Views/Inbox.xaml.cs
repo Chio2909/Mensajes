@@ -25,7 +25,9 @@ namespace MnsjAn.Views
             InitializeComponent();
             BindingContext = new MensajesVM();
            
+
         }
+        
 
         private async void btnRecibe_Clicked(object sender, EventArgs e)
         {

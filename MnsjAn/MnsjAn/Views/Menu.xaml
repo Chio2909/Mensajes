@@ -11,21 +11,26 @@
             <StackLayout >
                 <!--toolbar-->
                 <StackLayout>
+                    
                     <Grid BackgroundColor="white" VerticalOptions="StartAndExpand" HeightRequest="40" Padding="10"
               RowSpacing="0" ColumnSpacing="0" ColumnDefinitions="*,*,*">
-                        <Button Grid.Column="1" Clicked="Button_Clicked"
-                WidthRequest="70" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold"
-                FontSize="16" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="38" Text="PLAY"
-                ></Button>
-                        <Button Grid.Column="2" x:Name="inbox" Clicked="inbox_Clicked"
-                WidthRequest="72" BackgroundColor="Transparent" TextColor="Gray" FontAttributes="Bold"
-                FontSize="16" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="38" Text="INBOX" 
-                ></Button>
-                        <ImageButton  Grid.Column="3"  x:Name="tool" Clicked="tool_Clicked"
-                WidthRequest="20" BackgroundColor="Transparent" Margin="10"
-                 HorizontalOptions="End" VerticalOptions="Center" HeightRequest="20" 
-                Source="https://images.emojiterra.com/twitter/v13.1/512px/2699.png" Opacity="10"
+                        
+                    <ImageButton  Grid.Column="0"  x:Name="home" Clicked="Button_Clicked"
+                WidthRequest="30" BackgroundColor="Transparent" Margin="20,0"
+                 HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="30" 
+                Source="home.png"
                 ></ImageButton>
+                 
+                        <ImageButton Grid.Column="1" Clicked="inbox_Clicked" x:Name="chat"
+                BackgroundColor="Transparent"  WidthRequest="30" HeightRequest="30"
+                HorizontalOptions="Center" VerticalOptions="Center" Source="chat.png"
+                ></ImageButton>
+                        <ImageButton  Grid.Column="2"  x:Name="tool" Clicked="tool_Clicked"
+                WidthRequest="30" BackgroundColor="Transparent" Margin="20,0"
+                 HorizontalOptions="End" VerticalOptions="Center" HeightRequest="30" 
+                Source="tool.png"
+                ></ImageButton>
+                        
                     </Grid>
                     <BoxView Color="#DDDCE1" HeightRequest="0.5"  HorizontalOptions="FillAndExpand"></BoxView>
 
@@ -33,6 +38,15 @@
             <Grid>
                 <Image Source="logo.png" Grid.Row="0" />
                 <BoxView BackgroundColor="White" Opacity="0.97" Grid.Row="0"/>
+
+                <Label
+                Text=" {Binding txtUser}"
+                TextColor="black"
+               FontAttributes="Bold"
+                HorizontalOptions="Center"
+                                FontSize="12"
+                >
+                </Label>
 
                 <!--CARRUSEL MENSAJES-->
                 <StackLayout>

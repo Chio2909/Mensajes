@@ -34,15 +34,15 @@
                 <!--Boton comenzar-->
                 <!--<Button 
                 x:Name="btnComenzar"
-                Text="¡Comenzar!"
-                BackgroundColor="black"
+                Text="; C.o.m.e.n.z.a.r"
+              FontFamily="FontIcons"
+                BackgroundColor="#401430"
+                BorderColor="#A60F55"
+                    BorderWidth="1.5"
                 TextColor="white"
-                FontAttributes="Bold"
                 Margin="20,0"
                 FontSize="22"
-                CornerRadius="25"
-                    ImageSource="play.png"
-                   
+                CornerRadius="15"
                 Clicked="btnComenzar_Clicked">
                 </Button>-->
 
@@ -70,7 +70,7 @@
                   TextDecorations="Underline" >
                             <Span.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding TapCommand}"
-                                          CommandParameter="https://nglapp.com/p/terms" />
+                                          CommandParameter="https://nglapi.000webhostapp.com/terms.php" />
                             </Span.GestureRecognizers>
                         </Span>
                         <Span Text=" y que has leido y aceptado nuestras " />
@@ -78,7 +78,7 @@
                   TextDecorations="Underline" >
                             <Span.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding TapCommand}"
-                                          CommandParameter="https://nglapp.com/p/privacy" />
+                                          CommandParameter="https://nglapi.000webhostapp.com/privacy.php" />
                             </Span.GestureRecognizers>
                         </Span>
                     </FormattedString>

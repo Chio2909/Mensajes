@@ -23,6 +23,17 @@ namespace MnsjAn.Views
 
 
         }
+        private void OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(e.NewTextValue))
+            {
+                btnListo.IsVisible = true;
+            }
+            else
+            {
+                btnListo.IsVisible = false;
+            }
+        }
 
         private async void btnListo_Clicked(object sender, EventArgs e)
         {
@@ -36,7 +47,8 @@ namespace MnsjAn.Views
 
                 Application.Current.Properties["keyUser"] = txtUser.Text.Trim();
                 Application.Current.Properties["IsLoggedIn"] = true;
-                await Navigation.PushAsync(new Menu());
+                Menu menu = new Menu();
+                await Navigation.PushAsync(menu);
             }
           
                 catch(Exception ex)

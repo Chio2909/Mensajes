@@ -22,65 +22,79 @@
     <StackLayout VerticalOptions="EndAndExpand"   
            HorizontalOptions="FillAndExpand" >
         <!--Lista opciones botones-->
-        <Frame CornerRadius="20"  HorizontalOptions="FillAndExpand" HeightRequest="300" >
+        <Frame CornerRadius="20"  HorizontalOptions="FillAndExpand" HeightRequest="320" >
             <StackLayout>
-
-                <buttons:SfButton x:Name="link" Text="How to share the link" ShowIcon="True" BackgroundColor="Transparent" 
-                              TextColor="Black" FontAttributes="Bold"
-                              FontSize="20" HorizontalOptions="CenterAndExpand" Clicked="link_Clicked">
-                <buttons:SfButton.Image>
-                    <Image Source="https://emojigraph.org/media/joypixels/love-letter_1f48c.png"
-                           HeightRequest="20" WidthRequest="20"/>
-                </buttons:SfButton.Image>
-            </buttons:SfButton>
-
-                <BoxView Color="#DDDCE1" HeightRequest="0.5"  HorizontalOptions="FillAndExpand"></BoxView>
-
-            <buttons:SfButton x:Name="ins"  Text="Follow our Instagram" TextColor="Black" ShowIcon="True"
-                    BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand"
-                    Clicked="ins_Clicked" FontSize="20" FontAttributes="Bold">
-                <buttons:SfButton.Image>
-                    <Image Source="https://i.pinimg.com/originals/3b/21/c7/3b21c7efd2ba9c119fb8d361acacc31d.png"
-                           HeightRequest="20" WidthRequest="20"/>
-                </buttons:SfButton.Image>
-            </buttons:SfButton>
-
-                <BoxView Color="#DDDCE1" HeightRequest="0.5"  HorizontalOptions="FillAndExpand"></BoxView>
-
-                <buttons:SfButton x:Name="help"  Text="I need help" TextColor="Black" HorizontalOptions="CenterAndExpand"
-                    BackgroundColor="Transparent" Clicked="help_Clicked" FontSize="20" ShowIcon="True" FontAttributes="Bold">
-                <buttons:SfButton.Image>
-                    <Image Source="https://emojitool.com/img/apple/ios-13.3/loudly-crying-face-190.png"
-                           HeightRequest="20" WidthRequest="20"/>
-                </buttons:SfButton.Image>
-            </buttons:SfButton>
-
-                <BoxView Color="#DDDCE1" HeightRequest="0.5"  HorizontalOptions="FillAndExpand"></BoxView>
-
-                <buttons:SfButton x:Name="sett"  Text="Settings" TextColor="Black" HorizontalOptions="CenterAndExpand"
-                    BackgroundColor="Transparent" Clicked="sett_Clicked" FontSize="20" ShowIcon="True" FontAttributes="Bold">
-                <buttons:SfButton.Image>
-                    <Image Source="https://emoji-copy.com/wp-content/uploads/2699.png"
-                           HeightRequest="20" WidthRequest="20"/>
-                </buttons:SfButton.Image>
-            </buttons:SfButton>
-
-                <BoxView Color="#DDDCE1" HeightRequest="0.5" ></BoxView>
+                <!--Boton preguntas-->
+                <Button 
+                x:Name="btnQuestion"
+                Text="Preguntas mas frecuentes"
+                BackgroundColor="#F21313"
+                TextColor="white"
+                FontAttributes="Bold"
+                FontSize="16"
+                Margin="20,5"
+                CornerRadius="20"
+                VerticalOptions="End"
+                Clicked="btnQuestion_Clicked"
+                />
+                <!--Boton problemas-->
+                <Button 
+                x:Name="btnProblem"
+                Text="Reportar un problema"
+                BackgroundColor="#F21313"
+                TextColor="white"
+                FontAttributes="Bold"
+                FontSize="16"
+                Margin="20,5"
+                CornerRadius="20"
+                VerticalOptions="End"
+                Clicked="btnProblem_ClickedAsync"
+                />
+                <!-- boton Idiomas -->
+                <Button 
+                x:Name="btnIdioma"
+                Text="Idiomas"
+                BackgroundColor="#F21313"
+                TextColor="white"
+                FontAttributes="Bold"
+                FontSize="16"
+                Margin="20,5"
+                CornerRadius="20"
+                VerticalOptions="End"
+                Clicked="btnIdioma_Clicked"
+                />
+                <!--Boton mi cuenta-->
                 
+                <Button 
+                    
+                x:Name="btnCuenta"
+                Text="Mi cuenta"
+                BackgroundColor="#F21313"
+                TextColor="white"
+                FontAttributes="Bold"
+                FontSize="16"
+                Margin="20,5"
+                CornerRadius="20"
+                VerticalOptions="End"
+                Clicked="btnCuenta_Clicked"
+                />
+
                 <!--Boton close-->
                 <Button 
                 x:Name="btnClose"
-                Text="Close"
+                Text="Cerrar"
                 BackgroundColor="#401430"
                 TextColor="white"
                 FontAttributes="Bold"
-                FontSize="20"
-                Margin="30,10"
-                CornerRadius="25"
+                FontSize="16"
+                Margin="20,5"
+                CornerRadius="20"
                 VerticalOptions="End"
                 Clicked="btnClose_Clicked"
                 />
+
             </StackLayout>
+           
         </Frame>
       </StackLayout>
 

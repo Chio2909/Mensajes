@@ -27,34 +27,41 @@ namespace MnsjAn.Views
             BindingContext = new UserVM();
         }
 
-        private void ins_Clicked(object sender, EventArgs e)
-        {
-            Browser.OpenAsync("https://www.instagram.com/ngl.app/?hl=es", BrowserLaunchMode.SystemPreferred);
-        }
+        //private void ins_Clicked(object sender, EventArgs e)
+        //{
+        //    Browser.OpenAsync("https://www.instagram.com/ngl.app/?hl=es", BrowserLaunchMode.SystemPreferred);
+        //}
 
-        private async void link_Clicked(object sender, EventArgs e)
-        {
-            await PopupNavigation.Instance.PushAsync(new uno());
-        }
 
-        private async void help_Clicked(object sender, EventArgs e)
-        {
-            var mensaje = new EmailMessage("I need help", "Id: "  + " App version: 2.1.1", "safety@nglapp.com");
-            mensaje.BodyFormat = EmailBodyFormat.PlainText;
-            await Email.ComposeAsync(mensaje);
-        }
 
-        private async void sett_Clicked(object sender, EventArgs e)
-        {
-           
-            await PopupNavigation.Instance.PushAsync(new Settings());
-        }
 
         private async void btnClose_Clicked(object sender, EventArgs e)
         {
             // await Navigation.PopAsync();
             //await Navigation.PushAsync(new Menu());
             await PopupNavigation.Instance.PopAsync();
+        }
+
+        private void btnQuestion_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void btnProblem_ClickedAsync(object sender, EventArgs e)
+        {
+            var mensaje = new EmailMessage("Reportar un problema" + " App version: 2.0.0", "ayuda@myquestions.com");
+            mensaje.BodyFormat = EmailBodyFormat.PlainText;
+            await Email.ComposeAsync(mensaje);
+        }
+
+        private void btnIdioma_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void btnCuenta_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Cuenta());
         }
     }
 }

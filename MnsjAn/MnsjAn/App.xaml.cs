@@ -11,7 +11,7 @@ namespace MnsjAn
         {
             InitializeComponent();
             Properties["IsLoggedIn"] = false;
-            MainPage = new NavigationPage(new Views.Menu());
+            MainPage = new NavigationPage(new start());
         
         }
 

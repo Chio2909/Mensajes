@@ -56,7 +56,7 @@
                         HeightRequest="40"
                         BackgroundColor="Transparent"
     FontSize="20"
-                        
+                        TextChanged="OnTextChanged"
                         Margin="20,0,20,0"
                 HorizontalTextAlignment="Center" 
               
@@ -87,15 +87,16 @@
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand" 
                    Clicked="btnListo_Clicked"
-                  WidthRequest="250"
+                  WidthRequest="260"
                   BackgroundColor="Transparent"
                               Margin="0,30,0,0"
+                              IsVisible="false"
                             >
-                    <ImageButton.Triggers>
+                    <!--<ImageButton.Triggers>
                         <DataTrigger TargetType="ImageButton" Binding="{Binding Source={x:Reference txtUser}, Path=Text.Length}" Value="0">
                             <Setter Property="IsVisible" Value="False"></Setter>
                         </DataTrigger>
-                    </ImageButton.Triggers>
+                    </ImageButton.Triggers>-->
                    
                 </ImageButton>
 
