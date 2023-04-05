@@ -20,20 +20,11 @@ namespace MnsjAn.Views
     public partial class Tool : Rg.Plugins.Popup.Pages.PopupPage
     {
       
-
         public Tool()
         {
             InitializeComponent();
             BindingContext = new UserVM();
         }
-
-        //private void ins_Clicked(object sender, EventArgs e)
-        //{
-        //    Browser.OpenAsync("https://www.instagram.com/ngl.app/?hl=es", BrowserLaunchMode.SystemPreferred);
-        //}
-
-
-
 
         private async void btnClose_Clicked(object sender, EventArgs e)
         {
@@ -42,26 +33,50 @@ namespace MnsjAn.Views
             await PopupNavigation.Instance.PopAsync();
         }
 
-        private void btnQuestion_Clicked(object sender, EventArgs e)
+        private async void btnQuestion_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Preguntas());
+            await PopupNavigation.Instance.PopAsync();
         }
 
         private async void btnProblem_ClickedAsync(object sender, EventArgs e)
         {
-            var mensaje = new EmailMessage("Reportar un problema" + " App version: 2.0.0", "ayuda@myquestions.com");
+            var mensaje = new EmailMessage("Reporte de Problema", "", "ayudamsq@gmail.com");
             mensaje.BodyFormat = EmailBodyFormat.PlainText;
             await Email.ComposeAsync(mensaje);
+
         }
 
-        private void btnIdioma_Clicked(object sender, EventArgs e)
+        private async void btnIdioma_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Idioma());
+            await PopupNavigation.Instance.PopAsync();
         }
 
         private async void btnCuenta_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Cuenta());
+            await Navigation.PushAsync(new MiCuenta());
+            await PopupNavigation.Instance.PopAsync();
+        }
+
+        private void btnFace_Clicked(object sender, EventArgs e)
+        {
+            Browser.OpenAsync("https://es-la.facebook.com/", BrowserLaunchMode.SystemPreferred);
+        }
+
+        private void btnIns_Clicked(object sender, EventArgs e)
+        {
+            Browser.OpenAsync("https://www.instagram.com/", BrowserLaunchMode.SystemPreferred);
+        }
+
+        private void btnYou_Clicked(object sender, EventArgs e)
+        {
+            Browser.OpenAsync("https://www.youtube.com/", BrowserLaunchMode.SystemPreferred);
+        }
+
+        private void btnTik_Clicked(object sender, EventArgs e)
+        {
+            Browser.OpenAsync("https://www.tiktok.com/es/", BrowserLaunchMode.SystemPreferred);
         }
     }
 }

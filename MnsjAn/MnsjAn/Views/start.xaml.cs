@@ -23,8 +23,12 @@ namespace MnsjAn.Views
         }
         private async void btnComenzar_Clicked(object sender, EventArgs e)
         {
+            await btnComenzar.ScaleTo(0.8, 1000, Easing.SinInOut);
+            await btnComenzar.ScaleTo(1, 1000, Easing.SinInOut);
             await Navigation.PushAsync(new Usuario());
         }
+       
+        
         //public Command Usuario
         //{
         //    get

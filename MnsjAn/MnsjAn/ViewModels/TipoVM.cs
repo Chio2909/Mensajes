@@ -43,7 +43,8 @@ namespace MnsjAn.ViewModels
                         id = result.id,
                         mensaje = result.mensaje,
                         siglas = result.siglas,
-                        enlace = result.enlace
+                        color_first = result.color_first,
+                        color_two = result.color_two
 
                     });
                 }

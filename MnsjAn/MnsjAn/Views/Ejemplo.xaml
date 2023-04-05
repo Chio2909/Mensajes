@@ -4,7 +4,20 @@
              x:Class="MnsjAn.Views.Ejemplo">
     <ContentPage.Content>
         <StackLayout>
-          
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="300" />
+                </Grid.ColumnDefinitions>
+                <!-- Contenido de la pantalla principal -->
+                <StackLayout Grid.Column="0">
+                    <!-- Aquí puedes agregar todos los elementos que quieras mostrar en la pantalla principal -->
+                </StackLayout>
+                <!-- Contenido de la pantalla derecha -->
+                <ContentView Grid.Column="1" BackgroundColor="White" WidthRequest="300">
+                    <Label Text="hOLA "></Label>
+                </ContentView>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

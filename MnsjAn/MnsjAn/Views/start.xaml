@@ -47,7 +47,7 @@
                 </Button>-->
 
                 <ImageButton  x:Name="btnComenzar"
-                    Source="comenzar.png"
+                    Source="com.png"
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand" 
                    Clicked="btnComenzar_Clicked"

@@ -11,6 +11,7 @@ namespace MnsjAn.Models
 
         public string siglas { get; set; }
 
-        public string enlace { get; set; }
+        public string color_first { get; set; }
+        public string color_two { get; set; }
     }
 }

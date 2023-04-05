@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MnsjAn.Views.Inbox"
-             NavigationPage.HasNavigationBar="False">
+            xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             NavigationPage.HasNavigationBar="False"
+            >
     <ContentPage.Content>
         <StackLayout>
             <!--toolbar-->
@@ -11,20 +13,23 @@
               RowSpacing="0" ColumnSpacing="0" ColumnDefinitions="*,*,*">
                     <ImageButton  Grid.Column="0"  x:Name="home" Clicked="Button_Clicked"
                 WidthRequest="30" BackgroundColor="Transparent" Margin="20,0"
-                 HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="30" 
+                 HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="30" Opacity="0.3"
                 Source="home.png"
-                ></ImageButton>
+                >
+                    </ImageButton>
 
                     <ImageButton Grid.Column="1" Clicked="inbox_Clicked" x:Name="chat"
                 BackgroundColor="Transparent"  WidthRequest="30" HeightRequest="30"
                 HorizontalOptions="Center" VerticalOptions="Center" Source="chat.png"
                 ></ImageButton>
+
                     <ImageButton  Grid.Column="2"  x:Name="tool" Clicked="tool_Clicked"
                 WidthRequest="30" BackgroundColor="Transparent" Margin="20,0"
                  HorizontalOptions="End" VerticalOptions="Center" HeightRequest="30" 
-                Source="tool.png"
+                Source="tool.png" Opacity="0.3"
                 ></ImageButton>
                 </Grid>
+                
                 <BoxView Color="#DDDCE1" HeightRequest="0.5"  HorizontalOptions="FillAndExpand"></BoxView>
 
             </StackLayout>
@@ -38,6 +43,7 @@
                 <StackLayout Grid.Row="5" Padding="20,0" HorizontalOptions="FillAndExpand">
                     <CollectionView x:Name="mycollection" ItemsSource="{Binding mensajesList}"  SelectionMode="Single" 
                     SelectionChanged="mycollection_SelectionChanged">
+                        
                         <!--Vista por si esta vacio-->
                         <CollectionView.EmptyView>
                             <StackLayout >
@@ -67,7 +73,7 @@
                    />
 
                                 <!--Boton recibe-->
-                                <Button
+                                    <Button
                 x:Name="btnRecibe"
                 Text="¡Recibe preguntas!"
                 BackgroundColor="#401430"
@@ -80,21 +86,38 @@
                 Clicked="btnRecibe_Clicked"
                 
                />
-
-                            </StackLayout>
+                                </StackLayout>
                         </CollectionView.EmptyView>
-                        <CollectionView.ItemsLayout>
+                            <!--Vista de los mensajes-->
+                            <CollectionView.ItemsLayout>
                             <GridItemsLayout Orientation="Vertical" Span="1" />
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <StackLayout Padding="0,0,5,5">
-                                        <Frame BackgroundColor="#401430" CornerRadius="20">
-                                            <Label Text=" Nueva pregunta" TextColor="White" FontFamily="fontello"/>
+                                    <StackLayout>
+                                        <yummy:PancakeView
+            Margin="5"
+            CornerRadius="20,20,0,20"
+            HeightRequest="80"
+            BackgroundColor="#401430"
+            VerticalOptions="CenterAndExpand">
+                                            <Label
+                Margin="16,0"
+                 TextColor="White"
+                FontSize="20"
+                Text="Nueva pregunta"
+                VerticalOptions="Center" />
+                                        </yummy:PancakeView>
+                                    </StackLayout>
+                                
+                                    <!--<StackLayout Padding="0,0,5,5">
+                                        <Frame BackgroundColor="#401430" CornerRadius="20" Margin="10" Padding="10" >
+                                            <Label Text=" Nueva pregunta" TextColor="White" />
                                         </Frame>
-                                    <!--<Image  Source="https://emojigraph.org/media/apple/love-letter_1f48c.png" HeightRequest="80" WidthRequest="80"/>-->
-                                </StackLayout>
-                            </DataTemplate>
+                                    --><!--<Image  Source="https://emojigraph.org/media/apple/love-letter_1f48c.png" HeightRequest="80" WidthRequest="80"/>--><!--
+                                </StackLayout>-->
+                          
+                                </DataTemplate>
                         </CollectionView.ItemTemplate>
                        
                     </CollectionView>

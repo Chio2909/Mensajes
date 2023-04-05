@@ -61,7 +61,29 @@
                 HorizontalTextAlignment="Center" 
               
                 />
-                <!--</Frame>-->
+                <!--<Label 
+                Text="Contraseña"
+    HorizontalTextAlignment="Center"
+                TextColor="White"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="22"
+                FontAttributes="Bold"
+    Margin="20,0,20,10"
+                />
+                <Entry 
+                        x:Name="txtPass"
+               FontAttributes="Bold"
+                TextColor="#F2D399"
+                        HeightRequest="40"
+                        BackgroundColor="Transparent"
+    FontSize="20"
+                   IsPassword="True"
+                        TextChanged="OnTextChanged"
+                        Margin="20,0,20,0"
+                HorizontalTextAlignment="Center" 
+              
+                />
+                --><!--</Frame>-->
                 <!--Boton listo-->
                 <!--<Button 
                x:Name="btnListo"
@@ -83,7 +105,7 @@
 
                 </Button>-->
                 <ImageButton  x:Name="btnListo"
-                    Source="login.png"
+                    Source="log.png"
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand" 
                    Clicked="btnListo_Clicked"
@@ -99,6 +121,27 @@
                     </ImageButton.Triggers>-->
                    
                 </ImageButton>
+                <!--Condiciones y politicas-->
+                <Label 
+                TextColor="White"
+                FontSize="14"
+                Margin="25,100,25,0"
+                VerticalOptions="End"
+                HorizontalTextAlignment="Center"
+                >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="¿No tienes una cuenta? " />
+                            <Span Text="Regístrate aquí"
+                  TextColor="#F2E857" FontAttributes="Bold" >
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnLabelClicked" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                          
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
 
             </StackLayout>
         </Grid>

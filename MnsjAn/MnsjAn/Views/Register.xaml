@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MnsjAn.Views.Register"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0,1">
+
+                    <GradientStop Color=" #401430"
+                          Offset="0.1" />
+                    <GradientStop Color="#A60F55"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+
+
+            <StackLayout VerticalOptions="Start" Spacing="10">
+                <!--Logo-->
+                <Image
+              
+                Source="logo.png"
+               HeightRequest="80"
+                Margin="0,20"
+                />
+                <!--user-->
+                <Label 
+                Text="Nombre de usuario"
+    HorizontalTextAlignment="Center"
+                TextColor="White"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="18"
+                FontAttributes="Bold"
+    Margin="20,0,20,10"
+                />
+
+                <Entry 
+                        x:Name="txtUser"
+               FontAttributes="Bold"
+                TextColor="#F2D399"
+                        HeightRequest="38"
+                        BackgroundColor="Transparent"
+    FontSize="16"
+                        Margin="20,0,20,0"
+                HorizontalTextAlignment="Center" 
+              
+                />
+                <!--email-->
+                <Label 
+                Text="Correo electronico"
+    HorizontalTextAlignment="Center"
+                TextColor="White"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="18"
+                FontAttributes="Bold"
+                    
+    Margin="20,0,20,10"
+                />
+
+                <Entry 
+                        x:Name="txtEmail"
+               FontAttributes="Bold"
+                TextColor="#F2D399"
+                        HeightRequest="38"
+                        BackgroundColor="Transparent"
+    FontSize="16"
+                    Keyboard="Email" 
+                        Margin="20,0,20,0"
+                HorizontalTextAlignment="Center" 
+              
+                />
+                <!--contraseña-->
+                <Label 
+                Text="Contraseña"
+    HorizontalTextAlignment="Center"
+                TextColor="White"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="18"
+                FontAttributes="Bold"
+    Margin="20,0,20,10"
+                />
+                <Entry 
+                        x:Name="txtPass"
+               FontAttributes="Bold"
+                TextColor="#F2D399"
+                        HeightRequest="38"
+                        BackgroundColor="Transparent"
+    FontSize="16"
+                   IsPassword="True"
+                        Margin="20,0,20,0"
+                HorizontalTextAlignment="Center" 
+              
+                />
+                <!--confirmar contraseña-->
+                <Label 
+                Text="Confirmar contraseña"
+    HorizontalTextAlignment="Center"
+                TextColor="White"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="18"
+                FontAttributes="Bold"
+    Margin="20,0,20,10"
+                />
+                <Entry 
+                        x:Name="txtPassConf"
+               FontAttributes="Bold"
+                TextColor="#F2D399"
+                        HeightRequest="38"
+                        BackgroundColor="Transparent"
+    FontSize="16"
+                   IsPassword="True"
+                        Margin="20,0,20,0"
+                HorizontalTextAlignment="Center" 
+              
+                />
+
+                <ImageButton  x:Name="btnRegistrar"
+                    Source="create.png"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" 
+                 Clicked="btnRegistrar_Clicked"
+                  WidthRequest="230"
+                  BackgroundColor="Transparent"
+                              Margin="0,20,0,0"
+                              
+                            >
+                 
+                </ImageButton>
+                <!--Condiciones y politicas-->
+                <Label 
+                TextColor="White"
+                FontSize="14"
+                Margin="25,20,25,0"
+                VerticalOptions="End"
+                HorizontalTextAlignment="Center"
+                >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Al registrarte, aceptas nuestras " />
+                            <Span Text="Condiciones de uso"
+                  TextDecorations="Underline" >
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://nglapi.000webhostapp.com/terms.php" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                            <Span Text=" y que has leido y aceptado nuestras " />
+                            <Span Text="Politicas de privacidad."
+                  TextDecorations="Underline" >
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://nglapi.000webhostapp.com/privacy.php" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

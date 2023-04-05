@@ -13,14 +13,14 @@
                     <Grid BackgroundColor="white" VerticalOptions="StartAndExpand" HeightRequest="50" Padding="10"
               RowSpacing="0" ColumnSpacing="0" ColumnDefinitions="*,*">
 
-                        <ImageButton Grid.Column="0" x:Name="warning" Clicked="warning_Clicked"
+                        <!--<ImageButton Grid.Column="0" x:Name="warning" Clicked="warning_Clicked"
                 WidthRequest="30" BackgroundColor="Transparent" Margin="10" HeightRequest="30"
                HorizontalOptions="Start" VerticalOptions="Center" 
                Source="https://icones.pro/wp-content/uploads/2021/05/icone-d-avertissement-noir-symbole-d-exclamation-gris.png" Opacity="20"
-                ></ImageButton>
+                ></ImageButton>-->
 
                         <ImageButton  Grid.Column="3"  x:Name="close" Clicked="cerrar_Clicked" 
-                WidthRequest="20" BackgroundColor="Transparent" Margin="10"
+                WidthRequest="20" BackgroundColor="Transparent" Margin="10,0,20,0"
                  HorizontalOptions="End" VerticalOptions="Center" HeightRequest="20" 
                 Source="https://cdn.pixabay.com/photo/2016/10/10/01/49/x-1727490_960_720.png" Opacity="10"
                 ></ImageButton>
@@ -31,42 +31,35 @@
 
 
                 <!--Card vista del mensaje-->
-                <StackLayout Margin="0,90,0,120" >
-                    <Frame 
-                   HeightRequest="150" WidthRequest="250"
-                    CornerRadius="20" HorizontalOptions="Center"  Margin="10" VerticalOptions="Center">
-                        <Frame.Background>
-                            <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
-                                <GradientStop Color="Transparent" Offset="0"/>
-                                <GradientStop Color="#F2D399" Offset="0.8"/>
-                                <GradientStop Color="#F2D399" Offset="0.9"/>
-                            </LinearGradientBrush>
-                        </Frame.Background>
+                <StackLayout >
+                    <Frame BorderColor="#F2D399" 
+                   HeightRequest="200" WidthRequest="300" 
+                    CornerRadius="20" HorizontalOptions="Center" Margin="20,100,20,20" VerticalOptions="Center">
+                        
 
-                        <Grid RowDefinitions="*,Auto,Auto" ColumnDefinitions="*,Auto">
-                            <Label x:Name="Mytipo" Text="{Binding mensaje}" FontAttributes="Bold" Padding="0,10,0,0"
-                                               TextColor="Black" HorizontalTextAlignment="Center" Grid.ColumnSpan="2" Grid.Row="0"/>
+                        <StackLayout Padding="-22">
+                            <Frame   HeightRequest="60" WidthRequest="100" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand"
+                                                       IsClippedToBounds="True" CornerRadius="25" HasShadow="False" Padding="0">
+                                <Frame.Background>
+                                    <LinearGradientBrush StartPoint="0,1" EndPoint="1,1">
+                                        <GradientStop Color="#F2D399" Offset="0.6"/>
+                                        <GradientStop Color="#F2D399" Offset="0.8"/>
+                                    </LinearGradientBrush>
+                                </Frame.Background>
+                                <Label Text="{Binding mensaje}" FontAttributes="Bold" x:Name="Mytipo"
+                                               TextColor="White"  HorizontalTextAlignment="Center" FontSize="20" VerticalOptions="Center"/>
+                            </Frame >
+                            <Label x:Name="Mydescripcion"  Text="{Binding descripcion}" FontAttributes="Bold" FontSize="16"
+                                               TextColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"/>
 
-                            <Label x:Name="Mydescripcion"  Text="{Binding descripcion}" FontAttributes="Bold" Padding="0,10,0,0"
-                                               TextColor="Black" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1"/>
-
-                        </Grid>
-
+                        </StackLayout>
+                        
                     </Frame>
                 </StackLayout>
-                <!--Botones ver y responder-->
-                <Button 
-                x:Name="btnVer"
-                Text="¿Quien mando esto?"
-                BackgroundColor="#F21313"
-                TextColor="white"
-                FontAttributes="Bold"
-                FontSize="20"
-                Margin="30,10"
-                CornerRadius="25"
-                VerticalOptions="End"
-             Clicked="btnVer_Clicked"
-                />
+
+
+   
+                
                 <Button 
                 x:Name="btnResponder"
                 Text="Responder"

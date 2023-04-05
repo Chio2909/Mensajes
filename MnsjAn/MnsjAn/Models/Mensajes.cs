@@ -8,7 +8,6 @@ namespace MnsjAn.Models
     {
         public int id { get; set; }
         public string descripcion { get; set; }
-
         public int tipo_id { get; set; }
         public int usuario_id { get; set; }
         public DateTime fecha_creacion { get; set; }

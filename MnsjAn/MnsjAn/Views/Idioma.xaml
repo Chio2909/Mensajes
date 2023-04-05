@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MnsjAn.Views.MiCuenta"
+             xmlns:translate="clr-namespace:MnsjAn.Resources"
+             x:Class="MnsjAn.Views.Idioma"
               NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-
         <StackLayout>
             <!--toolbar-->
             <StackLayout>
@@ -37,22 +37,28 @@
                 <BoxView BackgroundColor="White" Opacity="0.97" Grid.Row="0"/>
 
 
-                <!--Cuenta -->
-                <StackLayout>
-                    <Frame Margin="10" Padding="10" HasShadow="True">
-                        <StackLayout>
-                            <Image Source="user_avatar.png" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" Margin="0,0,0,10" />
-                            <Label Text="Maria" FontSize="Large" />
-                            <Label Text="correo electronico" FontSize="Medium" TextColor="#888" Margin="0,0,0,10" />
-                            <Button Text="Editar perfil" BackgroundColor="#401430" TextColor="White" CornerRadius="20" HeightRequest="40" />
-                        </StackLayout>
-                    </Frame>
-
-
-                    <Button Text="Cerrar sesión" BackgroundColor="White" TextColor="#401430" Margin="10" CornerRadius="20" HeightRequest="40" />
+                <!--idiomas -->
+                <StackLayout VerticalOptions="Center">
+                    <Label Text="Seleccione un idioma:" 
+                   FontSize="Large"
+                   HorizontalOptions="Center"/>
+                    <Picker x:Name="languagePicker"
+                    Title="Idiomas"
+                    FontSize="Medium"
+                    ItemsSource="{Binding LanguageOptions}"
+                    ItemDisplayBinding="{Binding DisplayName}"/>
+                    <Button Text="Guardar"
+                    TextColor="white"
+                    FontSize="Medium"
+                    HorizontalOptions="Center"
+                    BackgroundColor="#401430"
+                    CornerRadius="20"
+                    Command="{Binding SaveLanguageCommand}"/>
                 </StackLayout>
+                
             </Grid>
         </StackLayout>
-    
+
+      
     </ContentPage.Content>
 </ContentPage>

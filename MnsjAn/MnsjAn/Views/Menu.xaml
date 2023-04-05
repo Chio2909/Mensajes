@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="MnsjAn.Views.Menu"
-             NavigationPage.HasNavigationBar="False"
+             x:Class="MnsjAn.Views.Menu" 
+              NavigationPage.HasNavigationBar="False"
             >
- 
-    
+
+
     <ContentPage.Content>
-       
-            <StackLayout >
+        <StackLayout >
                 <!--toolbar-->
                 <StackLayout>
                     
@@ -16,19 +15,19 @@
               RowSpacing="0" ColumnSpacing="0" ColumnDefinitions="*,*,*">
                         
                     <ImageButton  Grid.Column="0"  x:Name="home" Clicked="Button_Clicked"
-                WidthRequest="30" BackgroundColor="Transparent" Margin="20,0"
+                WidthRequest="30" Margin="20,0" BackgroundColor="Transparent"
                  HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="30" 
                 Source="home.png"
                 ></ImageButton>
                  
                         <ImageButton Grid.Column="1" Clicked="inbox_Clicked" x:Name="chat"
                 BackgroundColor="Transparent"  WidthRequest="30" HeightRequest="30"
-                HorizontalOptions="Center" VerticalOptions="Center" Source="chat.png"
+                HorizontalOptions="Center" VerticalOptions="Center" Source="chat.png" Opacity="0.3"
                 ></ImageButton>
                         <ImageButton  Grid.Column="2"  x:Name="tool" Clicked="tool_Clicked"
                 WidthRequest="30" BackgroundColor="Transparent" Margin="20,0"
                  HorizontalOptions="End" VerticalOptions="Center" HeightRequest="30" 
-                Source="tool.png"
+                Source="tool.png" Opacity="0.3"
                 ></ImageButton>
                         
                     </Grid>
@@ -36,7 +35,7 @@
 
                 </StackLayout>
             <Grid>
-                <Image Source="logo.png" Grid.Row="0" />
+                <Image Source="logo.png"  />
                 <BoxView BackgroundColor="White" Opacity="0.97" Grid.Row="0"/>
 
                 <Label
@@ -47,49 +46,42 @@
                                 FontSize="12"
                 >
                 </Label>
-
                 <!--CARRUSEL MENSAJES-->
                 <StackLayout>
-                    <StackLayout Margin="20,50,20,0">
+                    <StackLayout Margin="20,20,20,0">
 
                         <CarouselView x:Name="MyCarousel" IndicatorView="MyIndicatorView" PeekAreaInsets="50"
                           HeightRequest="200" ItemsSource="{Binding tipoList}">
                             <CarouselView.ItemTemplate>
                                 <DataTemplate>
                                     <StackLayout >
-                                        <Frame BorderColor="LightGray" 
-                   HeightRequest="200" WidthRequest="300"
-                    CornerRadius="20" HorizontalOptions="Center"  Margin="10">
-                                            <Frame.Background>
-                                                <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
-                                                    <GradientStop Color="Transparent" Offset="0"/>
-                                                    <GradientStop Color="{Binding enlace}" Offset="0.5"/>
-                                                    <GradientStop Color="{Binding enlace}" Offset="0.9"/>
-                                                </LinearGradientBrush>
-                                            </Frame.Background>
-
-                                            <Grid RowDefinitions="*,Auto,Auto" ColumnDefinitions="*,Auto" >
-
-                                                <Frame  Grid.ColumnSpan="2" Grid.Row="0" BackgroundColor="Transparent"
-                                                       IsClippedToBounds="True" CornerRadius="25" HasShadow="False" Padding="0" >
-                                                    <Image Source="https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png"  />
+                                        <Frame BorderColor="{Binding color_first}" 
+                   HeightRequest="200" WidthRequest="300" 
+                    CornerRadius="20" HorizontalOptions="Center" Margin="10">
+                                            
+                                            <StackLayout Padding="-22">
+                                                <Frame   HeightRequest="60" WidthRequest="100" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand"
+                                                       IsClippedToBounds="True" CornerRadius="25" HasShadow="False" Padding="0">
+                                                    <Frame.Background>
+                                                        <LinearGradientBrush StartPoint="0,1" EndPoint="1,1">
+                                                            <GradientStop Color="{Binding color_first}" Offset="0.6"/>
+                                                            <GradientStop Color="{Binding color_two}" Offset="0.8"/>
+                                                        </LinearGradientBrush>
+                                                    </Frame.Background>
+                                                    <Label Text="{Binding mensaje}" FontAttributes="Bold" 
+                                               TextColor="White"  HorizontalTextAlignment="Center" FontSize="20" VerticalOptions="Center"/>
                                                 </Frame >
-                                                <Label Grid.Column="1" Grid.Row="1" Text="{Binding siglas}" FontAttributes="Bold" Padding="0,10,0,0"
-                                               TextColor="White" HorizontalTextAlignment="Center" FontFamily="Lobster-Regular"/>
+                                                <!--<Label Grid.Column="1" Grid.Row="1" Text="{Binding siglas}" FontAttributes="Bold" Padding="0,10,0,0"
+                                               TextColor="red" HorizontalTextAlignment="Center" FontFamily="Lobster-Regular"/>-->
 
+                                                <!--<Label Text="{Binding mensaje}" FontAttributes="Bold" Padding="0,10,0,0"
+                                               TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="EndAndExpand" Grid.Column="1" Grid.Row="2"/>-->
 
-                                                <Label Text="{Binding mensaje}" FontAttributes="Bold" Padding="0,10,0,0"
-                                               TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="EndAndExpand" Grid.Column="1" Grid.Row="2"/>
-
-                                            </Grid>
-
+                                            </StackLayout>
                                         </Frame>
                                     </StackLayout>
-
                                 </DataTemplate>
-
                             </CarouselView.ItemTemplate>
-
                         </CarouselView>
 
                         <IndicatorView x:Name="MyIndicatorView"
@@ -100,11 +92,12 @@
                            VerticalOptions="Center"
                                HorizontalOptions="Center"/>
                     </StackLayout>
+                   
 
                     <!--ENLACE-->
                     <StackLayout  Margin="20,10,20,0">
                         <Frame
-                   HeightRequest="100" WidthRequest="500"
+                   HeightRequest="120" WidthRequest="500"
                     CornerRadius="15" HorizontalOptions="Center">
                             <Frame.Background>
                                 <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
@@ -116,7 +109,7 @@
                             <Grid>
                                 <StackLayout  >
                                     <Label
-                Text="Paso 1: Copia tu enlace"
+                Text="Comparte tu enlace"
                 TextColor="#EEE"
                FontAttributes="Bold"
                 HorizontalOptions="Center"
@@ -132,29 +125,34 @@
                 >
                                     </Label>
 
-                                    <!--<Button
-                                HeightRequest="40"
-                               Margin="30,0,30,0"
-                x:Name="btnEnlace"
-                Text="Copiar enlace"
-                 FontAttributes="Bold"
-                CornerRadius="25"
-                FontSize="15"
-                TextColor="Black"
-                BorderColor="black"
-                BorderWidth="1"
-                BackgroundColor="Transparent"
-                Clicked="btnEnlace_Clicked"
-                >
+                                    <!--<StackLayout Orientation="Horizontal" Spacing="-240">
 
-                            </Button>-->
+                                        <Button 
+                x:Name="btnEnlace"
+                Text="COPIAR ENLACE"
+                BackgroundColor="red"
+                TextColor="white"
+                FontSize="18"
+                WidthRequest="250"
+                HeightRequest="40"
+                BorderColor="Black"
+                BorderWidth="0.5"
+                Margin="20,5"
+                CornerRadius="10"
+               Clicked="btnEnlace_Clicked"
+                
+                />
+                                        <Image Source="facebook.png" WidthRequest="20" HeightRequest="20" Margin="0,5,0,0"></Image>
+
+                                    </StackLayout>-->
                                     <ImageButton  x:Name="btnEnlace"
-                    Source="copiar.png"
+                    Source="copy.png"
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand" 
                    Clicked="btnEnlace_Clicked"
                   WidthRequest="200"
                   BackgroundColor="Transparent"
+                                                  Margin="0,0,0,10"
                             />
 
                                 </StackLayout>
@@ -179,7 +177,7 @@
                             <Grid>
                                 <StackLayout>
                                     <Label
-                Text="Paso 2: Comparte el enlace en tu historia de Instagram"
+                Text="Comparte el enlace en todas tus redes sociales"
                                 HorizontalTextAlignment="Center"
                 TextColor="#EEE"
                FontAttributes="Bold"
@@ -201,11 +199,11 @@
                 Clicked="btnComparte_Clicked"
                 >-->
                                     <ImageButton  x:Name="btnComparte"
-                    Source="compartir.png"
+                    Source="share.png"
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand" 
                    Clicked="btnComparte_Clicked"
-                  WidthRequest="200"
+                  WidthRequest="210"
                   BackgroundColor="Transparent"
                             />
                                 </StackLayout>

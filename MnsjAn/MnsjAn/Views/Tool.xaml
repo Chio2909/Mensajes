@@ -4,7 +4,8 @@
                   xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"  
        xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"  
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
-             x:Class="MnsjAn.Views.Tool">
+             x:Class="MnsjAn.Views.Tool"
+                  >
 
     <!--Animacion de popup-->
     <pages:PopupPage.Animation>
@@ -25,6 +26,7 @@
         <Frame CornerRadius="20"  HorizontalOptions="FillAndExpand" HeightRequest="400" >
             <StackLayout>
                 <!--Boton preguntas-->
+              
                 <Button 
                 x:Name="btnQuestion"
                  FontAttributes="Bold"
@@ -37,6 +39,7 @@
                 VerticalOptions="End"
                 Clicked="btnQuestion_Clicked"
                 />
+                   
                 <!--Boton problemas-->
                 <Button 
                 x:Name="btnProblem"
@@ -96,16 +99,16 @@
                        FontAttributes="Bold" FontSize="20" Margin="20,5" HorizontalOptions="Center"/> 
                 
                 <StackLayout Orientation="Horizontal" Margin="20,5" HorizontalOptions="Center">
-                    <ImageButton x:Name="btnFace"
+                    <ImageButton x:Name="btnFace" Clicked="btnFace_Clicked"
                         Source="https://static.vecteezy.com/system/resources/previews/016/639/569/non_2x/facebook-icon-element-social-media-free-png.png"
                                  HeightRequest="35" WidthRequest="35"/>
-                    <ImageButton x:Name="btnIns"
+                    <ImageButton x:Name="btnIns" Clicked="btnIns_Clicked"
                         Source="https://static.vecteezy.com/system/resources/previews/017/743/717/non_2x/instagram-icon-logo-free-png.png"
                                  HeightRequest="35" WidthRequest="35"/>
-                    <ImageButton x:Name="btnYou"
+                    <ImageButton x:Name="btnYou" Clicked="btnYou_Clicked"
                         Source="https://static.vecteezy.com/system/resources/previews/016/716/452/non_2x/youtube-icon-free-png.png"
                                  HeightRequest="35" WidthRequest="35"/>
-                    <ImageButton x:Name="btnTik"
+                    <ImageButton x:Name="btnTik" Clicked="btnTik_Clicked"
                         Source="https://assets.stickpng.com/thumbs/5cb78671a7c7755bf004c14b.png"
                                  HeightRequest="35" WidthRequest="35"/>
                 </StackLayout>

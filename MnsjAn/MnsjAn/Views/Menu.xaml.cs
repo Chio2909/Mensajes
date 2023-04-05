@@ -32,6 +32,8 @@ namespace MnsjAn.Views
 
         private async void btnEnlace_Clicked(object sender, EventArgs e)
         {
+            await btnEnlace.ScaleTo(0.9, 1000, Easing.SinInOut);
+            await btnEnlace.ScaleTo(1, 1000, Easing.SinInOut);
             await Share.RequestAsync(new ShareTextRequest() {
                 Title="Compartir enlace",
                 Text= enlace.Text
@@ -45,6 +47,8 @@ namespace MnsjAn.Views
        
        private async void btnComparte_Clicked(object sender, EventArgs e) 
         {
+            await btnComparte.ScaleTo(0.8, 1000, Easing.SinInOut);
+            await btnComparte.ScaleTo(1, 1000, Easing.SinInOut);
             await PopupNavigation.Instance.PushAsync(new uno());
            // await Navigation.ShowPopupAsync(new uno());
            // await DisplayAlert("Popup closed", result.ToString(), "OK");
@@ -53,6 +57,7 @@ namespace MnsjAn.Views
 
         private async void tool_Clicked(object sender, EventArgs e)
         {
+           // await Navigation.PushAsync(new Ejemplo());
             await PopupNavigation.Instance.PushAsync(new Tool());
         }
 

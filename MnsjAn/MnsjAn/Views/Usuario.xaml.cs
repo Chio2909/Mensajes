@@ -6,7 +6,8 @@ using System;
 using System.Net;
 using System.Net.Http;
 using System.Text;
-
+using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace MnsjAn.Views
@@ -14,14 +15,11 @@ namespace MnsjAn.Views
 
     public partial class Usuario : ContentPage
     {
-    
-
-
+      
         public Usuario()
         {
             InitializeComponent();
-
-
+ 
         }
         private void OnTextChanged(object sender, TextChangedEventArgs e)
         {
@@ -34,7 +32,10 @@ namespace MnsjAn.Views
                 btnListo.IsVisible = false;
             }
         }
-
+        private async void OnLabelClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Register());
+        }
         private async void btnListo_Clicked(object sender, EventArgs e)
         {
             
@@ -47,6 +48,8 @@ namespace MnsjAn.Views
 
                 Application.Current.Properties["keyUser"] = txtUser.Text.Trim();
                 Application.Current.Properties["IsLoggedIn"] = true;
+                await btnListo.ScaleTo(0.8, 1000, Easing.SinInOut);
+                await btnListo.ScaleTo(1, 1000, Easing.SinInOut);
                 Menu menu = new Menu();
                 await Navigation.PushAsync(menu);
             }

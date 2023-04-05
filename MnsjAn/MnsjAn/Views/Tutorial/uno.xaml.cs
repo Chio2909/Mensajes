@@ -22,29 +22,33 @@ namespace MnsjAn.Views.Tutorial
         private async void btnSiguiente_Clicked(object sender, EventArgs e)
         {
           await PopupNavigation.Instance.PushAsync(new dos());
-            
-            
+          
+
         }
 
         private async void uno_Clicked(object sender, EventArgs e)
         {
             await PopupNavigation.Instance.PushAsync(new uno());
+           
             // await Navigation.PushAsync(new uno());
         }
 
         private async void dos_Clicked(object sender, EventArgs e)
         {
             await PopupNavigation.Instance.PushAsync(new dos());
+            
         }
 
         private async void tres_Clicked(object sender, EventArgs e)
         {
             await PopupNavigation.Instance.PushAsync(new tres());
+            
         }
 
         private async void cuatro_Clicked(object sender, EventArgs e)
         {
             await PopupNavigation.Instance.PushAsync(new cuatro());
+            
         }
     }
 }

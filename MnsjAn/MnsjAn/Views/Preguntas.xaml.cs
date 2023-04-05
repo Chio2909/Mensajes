@@ -11,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace MnsjAn.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MiCuenta : ContentPage
+    public partial class Preguntas : ContentPage
     {
-        public MiCuenta()
+        public Preguntas()
         {
             InitializeComponent();
         }
